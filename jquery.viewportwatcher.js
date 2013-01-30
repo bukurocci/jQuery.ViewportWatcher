@@ -1,3 +1,8 @@
+/*
+*	jQuery.WatchViewport.js
+*	Copyright 2013 Naokazu Shimabukuro
+*/
+
 ;(function($, window, undefined) {
 
 	var $window = $(window);
