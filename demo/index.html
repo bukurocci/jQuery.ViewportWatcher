@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery.ViewportWatcher demo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.viewportwatcher.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var watcher = $.ViewportWatcher('widthlessthan800', {
+			type: 'width',
+			min: 0,
+			max: 799
+		});
+		
+		watcher.on('inbound', function(evt, data) {
+			$('body').css('background-color', "#ff0000");
+		});
+		
+		watcher.on('outbound', function(evt, data) {
+			$('body').css('background-color', "#ffffff");
+		});
+	});
+	
+	</script>
+	<style type="text/css">
+	body {
+		padding: 0 10px;
+	}
+	pre {
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+<h1>jQuery.ViewportWatcher demo</h1>
+<p>if window width is narrower than 800px, background color turns to red.</p>
+
+<h2>sample</h2>
+<pre><code>$(function() {
+	var watcher = $.ViewportWatcher('widthlessthan800', {
+		type: 'width',
+		min: 0,
+		max: 799
+	});
+	
+	watcher.on('inbound', function(evt, data) {
+		$('body').css('background-color', "#ff0000");
+	});
+	
+	watcher.on('outbound', function(evt, data) {
+		$('body').css('background-color', "#ffffff");
+	});
+});</code></pre>
+</body>
+</html>
