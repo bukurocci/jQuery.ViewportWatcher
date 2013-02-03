@@ -1,5 +1,5 @@
 /*
-*	jQuery.WatchViewport.js
+*	jQuery.ViewportWatcher.js
 *	Copyright 2013 Naokazu Shimabukuro
 */
 
