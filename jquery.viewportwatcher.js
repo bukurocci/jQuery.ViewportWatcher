@@ -1,6 +1,8 @@
 /*
 *	jQuery.ViewportWatcher.js
+*	License: MIT license.
 *	Copyright 2013 Naokazu Shimabukuro
+*
 */
 
 ;(function($, window, undefined) {
